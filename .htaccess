@@ -1,0 +1,13 @@
+DirectoryIndex index.html
+Options +FollowSymLinks
+
+#AuthType Basic
+#AuthName "Restricted area"
+#AuthUserFile /home/weblime/data/www/dev.weblime.ru/alfasense.com/.htpasswd
+#Require valid-user
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+</IfModule>
