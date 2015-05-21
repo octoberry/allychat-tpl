@@ -180,46 +180,66 @@
                 </div>
                 
                 <div class="chat-block">
-                    <h3>Обращение 765</h3>
-
-                    <div class="cb-messages">
-                        <div class="cb-item">
-                            <div class="cb-message">
-                                <p>Хочу уточнить о списаниях по рублевому счету</p>
+                    <div class="cb-content">
+                        <h3>Обращение 765</h3>
+                        
+                        <div class="cb-messages">
+                            <div class="cb-item">
+                                <div class="cb-message">
+                                    <p>Хочу уточнить о списаниях по рублевому счету</p>
+                                </div>
+                                <div class="cb-date"><span>10 мин</span></div>
                             </div>
-                            <div class="cb-date"><span>10 мин</span></div>
-                        </div>
-                        <div class="cb-item admin">
-                            <div class="cb-message">
-                                <p>
-                                    Сергей, добрый день.<br />
-                                    Я вижу у вас по счету два списания.<br />
-                                    Комиссия за пакет услуг "Оптимум" 170 рублей. Комиссия является ежемесячной. И так же комиссия за услугу альфа-мобайл 59 рублей и комиссия так же списывается ежемесячно.<br />
-                                    Вы имели в виду эти списания?
-                                </p>
+                            <div class="cb-item admin">
+                                <div class="cb-message">
+                                    <p>
+                                        Сергей, добрый день.<br />
+                                        Я вижу у вас по счету два списания.<br />
+                                        Комиссия за пакет услуг "Оптимум" 170 рублей. Комиссия является ежемесячной. И так же комиссия за услугу альфа-мобайл 59 рублей и комиссия так же списывается ежемесячно.<br />
+                                        Вы имели в виду эти списания?
+                                    </p>
+                                </div>
+                                <div class="cb-date"><span>5 мин</span></div>
                             </div>
-                            <div class="cb-date"><span>5 мин</span></div>
-                        </div>
-                        <div class="cb-item">
-                            <div class="cb-message">
-                                <p>Спасибо! Теперь я все понял!!!!</p>
+                            <div class="cb-item">
+                                <div class="cb-message">
+                                    <p>Спасибо! Теперь я все понял!!!!</p>
+                                </div>
+                                <div class="cb-date"><span>3 мин</span></div>
                             </div>
-                            <div class="cb-date"><span>3 мин</span></div>
-                        </div>
-                        <div class="cb-item admin">
-                            <div class="cb-message">
-                                <p>
-                                    Сергей, обращайтесь!<br />
-                                    Хорошего дня!
-                                </p>
+                            <div class="cb-item admin">
+                                <div class="cb-message">
+                                    <p>
+                                        Сергей, обращайтесь!<br />
+                                        Хорошего дня!
+                                    </p>
+                                </div>
+                                <div class="cb-date"><span>1 мин</span></div>
                             </div>
-                            <div class="cb-date"><span>1 мин</span></div>
                         </div>
                     </div>
                     
                     <div class="ab-controls text-center">
-                        <button class="btn btn-success btn-success-lg"><img src="/img/icons/icon_postpone_over.png" alt="" /></button>
-                        <button class="btn btn-primary"><img src="/img/icons/icon_task_done.png" alt="" /></button>
+                        <div class="abc-item">
+                            <button class="btn btn-success btn-success-lg"><img src="/img/icons/icon_postpone_over.png" alt="" /></button>
+                        </div>
+                        <div class="abc-item">
+                            <button class="btn btn-primary"><img src="/img/icons/icon_task_done.png" alt="" /></button>
+                        </div>
+                        <div class="abc-item">
+                            <button class="btn btn-success btn-success-lg" data-toggle="show-form" data-id="#tag_form" data-hide=".cb-content"><img src="/img/icons/icon_share.png" alt="" style="margin-top: -5px;"/></button>
+
+                            <div id="tag_form" class="abc-input">
+                                <div class="input-group">
+                                    <input type="text" name="tag" class="form-control" placeholder="Добавить тег" />
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-default">
+                                            <img src="/img/icons/icon_send_white.png" alt="" />
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -368,6 +388,14 @@
                 $(".elastic").elastic();
                 $(".elastic").keypress(function(){
                     $(".sendmessage-block").css("height", (parseInt($(this).outerHeight(true)) + 24) + "px");
+                });
+                
+                $("body").on("click", "*[data-toggle=show-form]", function(){
+                    var $this = $(this),
+                        $form = $($this.data("id")),
+                        $hide = $($this.data("hide"));
+                    $form.show();
+                    $hide.css("opacity", "0.5");
                 });
             });
         </script>

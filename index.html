@@ -67,6 +67,12 @@
                                 <h4 class="media-heading">Сергей Ютусов</h4>
                                 <div class="time-last">16 мин</div>
                                 <p>Альфа-Банк самый клевый банк в мире. Новый сайт просто...</p>
+
+                                <div class="tags">
+                                    <ul class="tags-item">
+                                        <li><a href="#">Отзыв</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -101,6 +107,14 @@
                                 <h4 class="media-heading">Максим Горький</h4>
                                 <div class="time-last">1 мин</div>
                                 <p>Какая погода в тольятти?</p>
+
+                                <div class="tags">
+                                    <ul class="tags-item">
+                                        <li><a href="#">Погода</a></li>
+                                        <li><a href="#">Тольятти</a></li>
+                                        <li><a href="#">Вопросы за 300</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -161,22 +175,41 @@
                     </div>
 
                     <div class="appeal-block">
-                        <h3>Обращение 345</h3>
-                        <div class="ab-message">
-                            <div class="abm-text">
-                                <p>НЕНАВИЖУ ВАС!!! ВЕРНИТЕ ДЕНЬГИ!!!!!!!!</p>
+                        <div class="ab-content">
+                            <h3>Обращение 345</h3>
+                            <div class="ab-message">
+                                <div class="abm-text">
+                                    <p>НЕНАВИЖУ ВАС!!! ВЕРНИТЕ ДЕНЬГИ!!!!!!!!</p>
+                                </div>
+                                <div class="abm-date"><span>1 мин</span></div>
                             </div>
-                            <div class="abm-date"><span>1 мин</span></div>
                         </div>
 
                         <div class="ab-controls text-center">
-                            <button class="btn btn-success btn-success-lg"><img src="/img/icons/icon_postpone_over.png" alt="" /></button>
-                            <button class="btn btn-primary"><img src="/img/icons/icon_task_done.png" alt="" /></button>
-                            <button class="btn btn-success btn-success-lg"><img src="/img/icons/icon_concierge.png" alt="" style="margin-top: -5px;"/></button>
+                            <div class="abc-item">
+                                <button class="btn btn-success btn-success-lg"><img src="/img/icons/icon_postpone_over.png" alt="" /></button>
+                            </div>
+                            <div class="abc-item">
+                                <button class="btn btn-primary"><img src="/img/icons/icon_task_done.png" alt="" /></button>
+                            </div>
+                            <div class="abc-item">
+                                <button class="btn btn-success btn-success-lg" data-toggle="show-form" data-id="#tag_form" data-hide=".hb-messages, .hb-statistic, .ab-content"><img src="/img/icons/icon_share.png" alt="" style="margin-top: -5px;"/></button>
+
+                                <div id="tag_form" class="abc-input">
+                                    <div class="input-group">
+                                        <input type="text" name="tag" class="form-control" placeholder="Добавить тег" />
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-default">
+                                                <img src="/img/icons/icon_send_white.png" alt="" />
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="sendmessage-block">
                     <div class="col-left">
                         <textarea class="form-control elastic" placeholder="Отправить ответ Ctrl+Enter"></textarea>
@@ -215,7 +248,7 @@
                             <p>Планшет Apple iPad Air 2</p>
                             <p>iOS 8.3</p>
                         </div>
-                        
+
                         <div class="pb-cards">
                             <div class="pbc-slider">
                                 <ul>
@@ -233,11 +266,11 @@
                                     </li>
                                 </ul>
                             </div>
-                        
+
                             <div class="pbc-control right"><a href="#"></a></div>
                             <div class="pbc-control left"><a href="#"></a></div>
                         </div>
-                        
+
                         <div class="pb-statistic">
                             <div class="row pbs-item active">
                                 <div class="col-xs-8">
@@ -264,7 +297,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="pb-transaction">
                             <div class="row pbt-item">
                                 <div class="col-xs-8">
@@ -321,10 +354,18 @@
         <script type="text/javascript" src="/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="/js/jquery.elastic.source.js"></script>
         <script type="text/javascript">
-            $(document).ready(function(){
+            $(document).ready(function () {
                 $(".elastic").elastic();
-                $(".elastic").keypress(function(){
+                $(".elastic").keypress(function () {
                     $(".sendmessage-block").css("height", (parseInt($(this).outerHeight(true)) + 24) + "px");
+                });
+                
+                $("body").on("click", "*[data-toggle=show-form]", function(){
+                    var $this = $(this),
+                        $form = $($this.data("id")),
+                        $hide = $($this.data("hide"));
+                    $form.show();
+                    $hide.css("opacity", "0.5");
                 });
             });
         </script>

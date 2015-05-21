@@ -134,6 +134,20 @@ body {
         font-weight: normal;
     }
 
+.tags{}
+    .tags-item{
+        font-size: 0px;
+    }
+        .tags-item li{
+            display: inline-block;
+            background: #33aa8f;
+            border-radius: 15px;
+            font-size: 18px;
+            padding: 0px 12px;
+            color: #4fe3c1;
+            margin: 0px 8px 8px 0px;
+        }
+            .tags-item li a{color: #4fe3c1; text-decoration: none !important;}
     
     
 .control-block{
@@ -437,7 +451,41 @@ body {
     .ab-controls{
         margin-bottom: 46px;
     }
-        .ab-controls .btn{margin: 0 6px;}
+        .ab-controls .btn{}
+        .abc-item{
+            display: inline-block;
+            position: relative;
+            margin: 0 6px;
+        }
+            .abc-input{
+                position: absolute;
+                top: 0;
+                right: -8px;
+                display: none;
+            }
+                .abc-input .form-control{
+                    background: #9b9b9b;
+                    border-radius: 25px;
+                    width: 315px;
+                    outline: none !important;
+                    box-shadow: none !important;
+                    border: none !important;
+                    font-size: 26px;
+                    padding: 0px 30px;
+                    height: 62px;
+                }
+                    .abc-input input[placeholder]{color:#cfcfcf !important;}
+                    .abc-input input::-webkit-input-placeholder{color:#cfcfcf !important;}
+                    .abc-input input::-moz-placeholder{color:#cfcfcf !important;}
+                    .abc-input input:-moz-placeholder{color:#cfcfcf !important;}
+                    .abc-input input:-ms-input-placeholder{color:#cfcfcf !important;}
+                .abc-input .input-group-btn{}
+                .abc-input .btn-default{
+                    background: #9b9b9b;
+                    padding: 16px 20px;
+                    border-radius: 0 25px 25px 0;
+                }
+                    .abc-input .btn-default img{margin-top: -4px;}
         
 .sendmessage-block{
     position: absolute;
