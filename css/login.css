@@ -63,9 +63,15 @@ input:-ms-input-placeholder{color:rgba(255,255,255,0.5) !important;}
     font-size: 38px;
     padding: 20px 10px 20px 0px;
     width: 100%;
+    box-shadow: none !important;
+    border-radius: 0px;
+    height: 96px;
 }
-.form-control:focus{
+.form-control:focus,
+.form-control:active,
+.form-control:hover{
     opacity: 1;
+    border-color: white;
 }
 
 .form-button{
@@ -74,9 +80,10 @@ input:-ms-input-placeholder{color:rgba(255,255,255,0.5) !important;}
 }
 .btn{
     background: transparent;
-    color: white;
+    color: white !important;
     font-size: 38px;
     border: none;
     outline: none !important;
     cursor: pointer;
+    box-shadow: none !important;
 }
