@@ -470,9 +470,9 @@ body {
                 right: -8px;
                 display: none;
             }
-                .abc-input .form-control{
+                .ab-controls .abc-input .form-control{
                     background: #9b9b9b;
-                    border-radius: 25px;
+                    border-radius: 50px 0px 0px 50px;
                     width: 315px;
                     outline: none !important;
                     box-shadow: none !important;
@@ -480,6 +480,9 @@ body {
                     font-size: 26px;
                     padding: 0px 30px;
                     height: 62px;
+                    min-height: 62px;
+                    margin-top: 0px;
+                    color: white !important;
                 }
                     .abc-input input[placeholder]{color:#cfcfcf !important;}
                     .abc-input input::-webkit-input-placeholder{color:#cfcfcf !important;}
@@ -490,7 +493,7 @@ body {
                 .abc-input .btn-default{
                     background: #9b9b9b;
                     padding: 16px 20px;
-                    border-radius: 0 25px 25px 0;
+                    border-radius: 0 50px 50px 0;
                 }
                     .abc-input .btn-default img{margin-top: -4px;}
         
