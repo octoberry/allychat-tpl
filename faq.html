@@ -193,7 +193,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="chat-block">
                     <h3>Обращение 765</h3>
 
@@ -201,8 +201,8 @@
                         <div class="cb-item">
                             <div class="cb-message">
                                 <p>Хочу уточнить о списаниях по рублевому счету</p>
+                                <div class="cb-date"><span>10 мин</span></div>
                             </div>
-                            <div class="cb-date"><span>10 мин</span></div>
                         </div>
                         <div class="cb-item admin">
                             <div class="cb-message">
@@ -212,14 +212,14 @@
                                     Комиссия за пакет услуг "Оптимум" 170 рублей. Комиссия является ежемесячной. И так же комиссия за услугу альфа-мобайл 59 рублей и комиссия так же списывается ежемесячно.<br />
                                     Вы имели в виду эти списания?
                                 </p>
+                                <div class="cb-date"><span>5 мин</span></div>
                             </div>
-                            <div class="cb-date"><span>5 мин</span></div>
                         </div>
                         <div class="cb-item">
                             <div class="cb-message">
                                 <p>Спасибо! Теперь я все понял!!!!</p>
+                                <div class="cb-date"><span>3 мин</span></div>
                             </div>
-                            <div class="cb-date"><span>3 мин</span></div>
                         </div>
                         <div class="cb-item admin">
                             <div class="cb-message">
@@ -227,11 +227,13 @@
                                     Сергей, обращайтесь!<br />
                                     Хорошего дня!
                                 </p>
+                                <div class="cb-date"><span>1 мин</span></div>
                             </div>
-                            <div class="cb-date"><span>1 мин</span></div>
                         </div>
                     </div>
-                    
+                </div>
+
+                <div class="sendmessage-block">
                     <div class="ab-controls text-center">
                         <div class="abc-item">
                             <button class="btn btn-success btn-success-lg"><img src="/img/icons/icon_postpone_over.png" alt="" /></button>
@@ -254,9 +256,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="sendmessage-block">
+
                     <div class="col-left">
                         <textarea class="form-control elastic" placeholder="Отправить ответ Ctrl+Enter"></textarea>
                     </div>
@@ -390,11 +390,11 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-block">
                     <div class="fb-header">
                         <div class="close"><img src="/img/icons/close.png" alt="" /></div>
-                        
+
                         <div class="form-group">
                             <input type="text" name="faq" class="form-control" placeholder="Какой урок преподать?" />
                         </div>
@@ -407,10 +407,10 @@
                             <p>3. Выберите счет один и другой.</p>
                             <p>4. Укажите сумму, доступную для перевода.</p>
                             <p>5. Переводите.</p>
-                            
+
                             <a href="#" class="fbb-link"><button type="button" class="btn btn-default">Вставить в сообщение</button></a>
                         </div>
-                        
+
                         <div class="fbb-lesson">
                             <p><strong>2. Перевод с карты на карту</strong></p>
                             <p>1. Авторизуйтесь в альфа-клике.</p>
@@ -418,10 +418,10 @@
                             <p>3. Выберите счет один и другой.</p>
                             <p>4. Укажите сумму, доступную для перевода.</p>
                             <p>5. Переводите.</p>
-                            
+
                             <a href="#" class="fbb-link"><button type="button" class="btn btn-default">Вставить в сообщение</button></a>
                         </div>
-                        
+
                         <div class="fbb-lesson">
                             <p><strong>3. Перевод с карты на карту</strong></p>
                             <p>1. Авторизуйтесь в альфа-клике.</p>
@@ -429,10 +429,10 @@
                             <p>3. Выберите счет один и другой.</p>
                             <p>4. Укажите сумму, доступную для перевода.</p>
                             <p>5. Переводите.</p>
-                            
+
                             <a href="#" class="fbb-link"><button type="button" class="btn btn-default">Вставить в сообщение</button></a>
                         </div>
-                        
+
                         <div class="fbb-lesson">
                             <p><strong>4. Перевод между смоими счетами</strong></p>
                             <p>1. Авторизуйтесь в альфа-клике.</p>
@@ -440,10 +440,10 @@
                             <p>3. Выберите счет один и другой.</p>
                             <p>4. Укажите сумму, доступную для перевода.</p>
                             <p>5. Переводите.</p>
-                            
+
                             <a href="#" class="fbb-link"><button type="button" class="btn btn-default">Вставить в сообщение</button></a>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -453,16 +453,16 @@
         <script type="text/javascript" src="/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="/js/jquery.elastic.source.js"></script>
         <script type="text/javascript">
-            $(document).ready(function(){
+            $(document).ready(function () {
                 $(".elastic").elastic();
-                $(".elastic").keypress(function(){
+                $(".elastic").keypress(function () {
                     $(".sendmessage-block").css("height", (parseInt($(this).outerHeight(true)) + 24) + "px");
                 });
-                
-                $("body").on("click", "*[data-toggle=show-form]", function(){
+
+                $("body").on("click", "*[data-toggle=show-form]", function () {
                     var $this = $(this),
-                        $form = $($this.data("id")),
-                        $hide = $($this.data("hide"));
+                            $form = $($this.data("id")),
+                            $hide = $($this.data("hide"));
                     $form.show();
                     $hide.css("opacity", "0.5");
                 });

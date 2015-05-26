@@ -187,8 +187,8 @@
                             <div class="cb-item">
                                 <div class="cb-message">
                                     <p>Хочу уточнить о списаниях по рублевому счету</p>
+                                    <div class="cb-date"><span>10 мин</span></div>
                                 </div>
-                                <div class="cb-date"><span>10 мин</span></div>
                             </div>
                             <div class="cb-item admin">
                                 <div class="cb-message">
@@ -198,27 +198,26 @@
                                         Комиссия за пакет услуг "Оптимум" 170 рублей. Комиссия является ежемесячной. И так же комиссия за услугу альфа-мобайл 59 рублей и комиссия так же списывается ежемесячно.<br />
                                         Вы имели в виду эти списания?
                                     </p>
+                                    <div class="cb-date"><span>5 мин</span></div>
                                 </div>
-                                <div class="cb-date"><span>5 мин</span></div>
                             </div>
                             <div class="cb-item">
                                 <div class="cb-message">
                                     <p>Спасибо! Теперь я все понял!!!!</p>
+                                    <div class="cb-date"><span>3 мин</span></div>
                                 </div>
-                                <div class="cb-date"><span>3 мин</span></div>
                             </div>
                             <div class="cb-item admin">
-                                <div class="cb-message">
-                                    <p>
-                                        Сергей, обращайтесь!<br />
-                                        Хорошего дня!
-                                    </p>
+                                <div class="cb-message is-img">
+                                    <img src="http://weblime.ru/img/panda.png" alt="" />
+                                    <div class="cb-date"><span>1 мин</span></div>
                                 </div>
-                                <div class="cb-date"><span>1 мин</span></div>
                             </div>
                         </div>
                     </div>
-                    
+                </div>
+                
+                <div class="sendmessage-block">
                     <div class="ab-controls text-center">
                         <div class="abc-item">
                             <button class="btn btn-success btn-success-lg"><img src="/img/icons/icon_postpone_over.png" alt="" /></button>
@@ -241,9 +240,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="sendmessage-block">
+                    
                     <div class="col-left">
                         <textarea class="form-control elastic" placeholder="Отправить ответ Ctrl+Enter"></textarea>
                     </div>
@@ -386,8 +383,8 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 $(".elastic").elastic();
-                $(".elastic").keypress(function(){
-                    $(".sendmessage-block").css("height", (parseInt($(this).outerHeight(true)) + 24) + "px");
+                $(".elastic").keydown(function(){
+                    $(".sendmessage-block").css("height", (parseInt($(this).outerHeight(true))) + "px");
                 });
                 
                 $("body").on("click", "*[data-toggle=show-form]", function(){

@@ -364,12 +364,16 @@ body {
                 color: #565656;
                 margin-right: 135px;
                 line-height: 1.7em;
+                display: inline-block;
+                position: relative;
             }
                 .cb-message p{margin-bottom: 0px;}
+            .cb-message.is-img{overflow: hidden; padding: 0px;}
+                .cb-message.is-img img{max-width: 100%;}
             .cb-date{
                 position: absolute;
                 top: 0px;
-                right: 0px;
+                right: -150px;
                 font-size: 18px;
                 width: 125px;
                 line-height: 1.3em;
@@ -397,6 +401,7 @@ body {
             }
             .cb-item.admin .cb-date{
                 width: 75px;
+                right: -100px;
             }
     
 .appeal-block{
@@ -450,6 +455,9 @@ body {
 
     .ab-controls{
         margin-bottom: 46px;
+        position: absolute;
+        top: -80px;
+        width: 100%;
     }
         .ab-controls .btn{}
         .abc-item{
@@ -494,7 +502,6 @@ body {
     min-height: 80px;
     background: #e9e9e9;
     width: 100%;
-    overflow: hidden;
 }
     
     .sendmessage-block .form-control{
@@ -506,7 +513,8 @@ body {
         font-size: 26px;
         height: 40px;
         padding: 12px 39px;
-        margin-top: 12px;
+        margin-top: 10px;
+        min-height: 68px;
         resize: none;
         line-height: 1.3em;
         max-height: 300px;
@@ -522,6 +530,7 @@ body {
             top: 0;
             left: 0;
             right: 200px;
+            overflow: hidden;
         }
         .mb-controls{
             position: absolute;

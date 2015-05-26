@@ -184,33 +184,33 @@
                                 <div class="abm-date"><span>1 мин</span></div>
                             </div>
                         </div>
-
-                        <div class="ab-controls text-center">
-                            <div class="abc-item">
-                                <button class="btn btn-success btn-success-lg"><img src="/img/icons/icon_postpone_over.png" alt="" /></button>
-                            </div>
-                            <div class="abc-item">
-                                <button class="btn btn-primary"><img src="/img/icons/icon_task_done.png" alt="" /></button>
-                            </div>
-                            <div class="abc-item">
-                                <button class="btn btn-success btn-success-lg" data-toggle="show-form" data-id="#tag_form" data-hide=".hb-messages, .hb-statistic, .ab-content"><img src="/img/icons/icon_share.png" alt="" style="margin-top: -5px;"/></button>
-
-                                <div id="tag_form" class="abc-input">
-                                    <div class="input-group">
-                                        <input type="text" name="tag" class="form-control" placeholder="Добавить тег" />
-                                        <span class="input-group-btn">
-                                            <button type="submit" class="btn btn-default">
-                                                <img src="/img/icons/icon_send_white.png" alt="" />
-                                            </button>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <div class="sendmessage-block">
+                    <div class="ab-controls text-center">
+                        <div class="abc-item">
+                            <button class="btn btn-success btn-success-lg"><img src="/img/icons/icon_postpone_over.png" alt="" /></button>
+                        </div>
+                        <div class="abc-item">
+                            <button class="btn btn-primary"><img src="/img/icons/icon_task_done.png" alt="" /></button>
+                        </div>
+                        <div class="abc-item">
+                            <button class="btn btn-success btn-success-lg" data-toggle="show-form" data-id="#tag_form" data-hide=".hb-messages, .hb-statistic, .ab-content"><img src="/img/icons/icon_share.png" alt="" style="margin-top: -5px;"/></button>
+
+                            <div id="tag_form" class="abc-input">
+                                <div class="input-group">
+                                    <input type="text" name="tag" class="form-control" placeholder="Добавить тег" />
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-default">
+                                            <img src="/img/icons/icon_send_white.png" alt="" />
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-left">
                         <textarea class="form-control elastic" placeholder="Отправить ответ Ctrl+Enter"></textarea>
                     </div>
@@ -359,11 +359,11 @@
                 $(".elastic").keypress(function () {
                     $(".sendmessage-block").css("height", (parseInt($(this).outerHeight(true)) + 24) + "px");
                 });
-                
-                $("body").on("click", "*[data-toggle=show-form]", function(){
+
+                $("body").on("click", "*[data-toggle=show-form]", function () {
                     var $this = $(this),
-                        $form = $($this.data("id")),
-                        $hide = $($this.data("hide"));
+                            $form = $($this.data("id")),
+                            $hide = $($this.data("hide"));
                     $form.show();
                     $hide.css("opacity", "0.5");
                 });
