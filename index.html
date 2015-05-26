@@ -356,8 +356,14 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 $(".elastic").elastic();
-                $(".elastic").keypress(function () {
-                    $(".sendmessage-block").css("height", (parseInt($(this).outerHeight(true)) + 24) + "px");
+                $(".elastic").keydown(function(){
+                    var bHeight = parseInt($(this).outerHeight(true));
+                    $(".sendmessage-block").css("height", bHeight + "px");
+                    var bHeightFull = bHeight + parseInt($(".ab-controls").outerHeight(true));
+                    var windowHeight = parseInt($(".col2").outerHeight(true));
+                    var bHeightPercent = Math.round(bHeightFull * 100 / windowHeight);
+                    $(".chat-block").css("height", 91-bHeightPercent + "%");
+                    $(".chat-block").scrollTop(parseInt($(".chat-block").outerHeight(true)));
                 });
 
                 $("body").on("click", "*[data-toggle=show-form]", function () {

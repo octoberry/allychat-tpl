@@ -339,8 +339,8 @@ body {
     }
     
 .chat-block{
-    padding: 40px;
-    height: 88%;
+    padding: 40px 40px 0px 40px;
+    height: 85%;
     overflow: auto;
 }
     .chat-block h3{
@@ -349,7 +349,7 @@ body {
         margin-bottom: 35px;
         font-weight: normal;
     }
-    .cb-messages{margin-bottom: 40px;}
+    .cb-messages{}
         .cb-item{
             margin-bottom: 17px;
             position: relative;
@@ -368,12 +368,12 @@ body {
                 position: relative;
             }
                 .cb-message p{margin-bottom: 0px;}
-            .cb-message.is-img{overflow: hidden; padding: 0px;}
-                .cb-message.is-img img{max-width: 100%;}
+            .cb-message.is-img{padding: 0px;}
+                .cb-message.is-img img{max-width: 100%; border-radius: 20px;}
             .cb-date{
                 position: absolute;
                 top: 0px;
-                right: -150px;
+                right: -140px;
                 font-size: 18px;
                 width: 125px;
                 line-height: 1.3em;
@@ -401,7 +401,7 @@ body {
             }
             .cb-item.admin .cb-date{
                 width: 75px;
-                right: -100px;
+                right: -90px;
             }
     
 .appeal-block{
@@ -454,7 +454,6 @@ body {
             }
 
     .ab-controls{
-        margin-bottom: 46px;
         position: absolute;
         top: -80px;
         width: 100%;

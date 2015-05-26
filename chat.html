@@ -384,7 +384,13 @@
             $(document).ready(function(){
                 $(".elastic").elastic();
                 $(".elastic").keydown(function(){
-                    $(".sendmessage-block").css("height", (parseInt($(this).outerHeight(true))) + "px");
+                    var bHeight = parseInt($(this).outerHeight(true));
+                    $(".sendmessage-block").css("height", bHeight + "px");
+                    var bHeightFull = bHeight + parseInt($(".ab-controls").outerHeight(true));
+                    var windowHeight = parseInt($(".col2").outerHeight(true));
+                    var bHeightPercent = Math.round(bHeightFull * 100 / windowHeight);
+                    $(".chat-block").css("height", 91-bHeightPercent + "%");
+                    $(".chat-block").scrollTop(parseInt($(".chat-block").outerHeight(true)));
                 });
                 
                 $("body").on("click", "*[data-toggle=show-form]", function(){
