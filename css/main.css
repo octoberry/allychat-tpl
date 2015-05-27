@@ -366,6 +366,7 @@ body {
                 line-height: 1.7em;
                 display: inline-block;
                 position: relative;
+                text-align: left;
             }
                 .cb-message p{margin-bottom: 0px;}
             .cb-message.is-img{padding: 0px;}
@@ -394,6 +395,7 @@ body {
         
         .cb-item.admin{
             margin-left: 40px;
+            text-align: right;
         }
             .cb-item.admin .cb-message{
                 background: #ececec;
