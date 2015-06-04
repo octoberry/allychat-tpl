@@ -14,7 +14,7 @@
         <div class="layout">
             <div class="col1">
                 <div class="control-block">
-                    <div class="control-content" style="display: none;">
+                    <div class="control-content">
                         <div class="row">
                             <div class="col-xs-7">
                                 <button type="button" class="btn btn-link cb-control active">
@@ -31,13 +31,6 @@
                                     <img src="/img/icons/icon_search_down.png" alt="" />
                                 </button>
                             </div>
-                        </div>
-                    </div>
-                    <div class="search-block">
-                        <div class="form-group">
-                            <input type="text" class="form-control" value="RT65" />
-
-                            <div class="close"><img src="/img/icons/close_white.png" alt="" /></div>
                         </div>
                     </div>
                 </div>
@@ -131,7 +124,7 @@
                 </div>
             </div>
             <div class="col2">
-                <div class="history-block">
+                <div class="history-block" style="display: none;">
                     <div class="hb-messages">
                         <div class="hb-button text-center">
                             <button type="button" class="btn btn-default">Еще 47</button>
@@ -162,19 +155,63 @@
                             <div class="hbm-date"><span>2 дня назад</span></div>
                         </div>
                     </div>
-                    
+
                     <div class="hb-statistic text-center">
                         <p>5 обращений за последнии 3 месяца</p>
                     </div>
-                    
+
                     <div class="appeal-block">
-                        <div class="ab-content">
-                            <h3>Обращение 345</h3>
-                            <div class="ab-message">
-                                <div class="abm-text">
-                                    <p>НЕНАВИЖУ ВАС!!! ВЕРНИТЕ ДЕНЬГИ!!!!!!!!</p>
+                        <h3>Обращение 345</h3>
+                        <div class="ab-message">
+                            <div class="abm-text">
+                                <p>НЕНАВИЖУ ВАС!!! ВЕРНИТЕ ДЕНЬГИ!!!!!!!!</p>
+                            </div>
+                            <div class="abm-date"><span>1 мин</span></div>
+                        </div>
+
+                        <div class="ab-controls text-center">
+                            <button class="btn btn-success btn-success-lg"><img src="/img/icons/icon_postpone_over.png" alt="" /></button>
+                            <button class="btn btn-primary"><img src="/img/icons/icon_task_done.png" alt="" /></button>
+                            <button class="btn btn-success btn-success-lg">
+                                <img src="/img/icons/icon_add_to_last.png" alt="" style="margin-top: 6px; margin-left: 6px;"/>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-block">
+                    <div class="cb-content">
+                        <h3>Обращение 765</h3>
+
+                        <div class="cb-messages">
+                            <div class="cb-item">
+                                <div class="cb-message">
+                                    <p>Хочу уточнить о списаниях по рублевому счету</p>
+                                    <div class="cb-date"><span>10 мин</span></div>
                                 </div>
-                                <div class="abm-date"><span>1 мин</span></div>
+                            </div>
+                            <div class="cb-item admin">
+                                <div class="cb-message">
+                                    <p>
+                                        Сергей, добрый день.<br />
+                                        Я вижу у вас по счету два списания.<br />
+                                        Комиссия за пакет услуг "Оптимум" 170 рублей. Комиссия является ежемесячной. И так же комиссия за услугу альфа-мобайл 59 рублей и комиссия так же списывается ежемесячно.<br />
+                                        Вы имели в виду эти списания?
+                                    </p>
+                                    <div class="cb-date"><span>5 мин</span></div>
+                                </div>
+                            </div>
+                            <div class="cb-item">
+                                <div class="cb-message">
+                                    <p>Спасибо! Теперь я все понял!!!!</p>
+                                    <div class="cb-date"><span>3 мин</span></div>
+                                </div>
+                            </div>
+                            <div class="cb-item admin">
+                                <div class="cb-message is-img">
+                                    <img src="http://weblime.ru/img/panda.png" alt="" />
+                                    <div class="cb-date"><span>1 мин</span></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -190,8 +227,8 @@
                                 <button class="btn btn-primary"><img src="/img/icons/icon_task_done.png" alt="" /></button>
                             </div>
                             <div class="abc-item">
-                                <button class="btn btn-success btn-success-lg" data-toggle="show-form" data-id="#tag_form" data-hide=".hb-messages, .hb-statistic, .ab-content"><img src="/img/icons/icon_share.png" alt="" style="margin-top: -5px;"/></button>
-                        
+                                <button class="btn btn-success btn-success-lg" data-toggle="show-form" data-id="#tag_form" data-hide=".cb-content"><img src="/img/icons/icon_share.png" alt="" style="margin-top: -5px;"/></button>
+
                                 <div id="tag_form" class="abc-input">
                                     <div class="input-group">
                                         <input type="text" name="tag" class="form-control" placeholder="Добавить тег" />
@@ -204,8 +241,41 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="sb-help-block">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="sbh-item">
+                                        <div class="sbh-item-cell">
+                                            <div class="sbh-message">
+                                                <p>
+                                                    Единый платежный документ или ЕПД &mdash; это квитанция на оплату ЖКУ в Москве
+                                                </p>
+                                                <a href="#" class="sbh-link"><button type="button" class="btn btn-default">Вставить в сообщение</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="sbh-item">
+                                        <div class="sbh-message">
+                                            <p>
+                                                Все просто. Потяните экран как можно ниже и у вас откроется список счетов. Зажмите и удерживайте счет с которого хотите сделать перевод. Продолжая удерживать, перетащите на счет, который хотите пополнить. Дальше появится даилог с указанием суммы
+                                            </p>
+                                            <a href="#" class="sbh-link"><button type="button" class="btn btn-default">Вставить в сообщение</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="sbh-controls">
+                                <a href="#" class="sbhc-close"><img src="/img/icons/close.png" alt="" width="15" /></a>
+                                <a href="#" class="sbhc-arrow"><img src="/img/icons/arrow-left.png" alt="" /></a>
+                                <a href="#" class="sbhc-arrow"><img src="/img/icons/arrow-right.png" alt="" /></a>
+                            </div>
+                        </div>
                     </div>
-                    
+
                     <div class="col-left">
                         <textarea class="form-control elastic" placeholder="Отправить ответ Ctrl+Enter"></textarea>
                     </div>
