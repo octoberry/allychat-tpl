@@ -149,9 +149,42 @@ body {
         }
             .tags-item li a{color: #4fe3c1; text-decoration: none !important;}
     
+.login-block{
+    background: #74f2d6;
+    height: 60px;
+    padding: 14px 23px;
+    position: relative;
+}
+    .login-block .profile{
+        float: left;
+    }
+        .login-block .media .media-object img{
+            border-radius: 50px;
+        }
+        .login-block .media .media-object .avatar{
+            background: #33aa8f;
+            border-radius: 50px;
+            position: relative;
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            line-height: 32px;
+            color: #50e3c2;
+        }
+        .login-block .media .media-body .media-heading{
+            color: white;
+            padding: 6px 0 0 10px;
+            letter-spacing: 0.6px;
+        }
+    
+    .login-block .logout{
+        position: absolute;
+        right: 25px;
+        top: 16px;
+    }
     
 .control-block{
-    padding: 55px 40px 11px 40px;
+    padding: 35px 40px 11px 40px;
 }
     .control-content{
         padding-bottom: 11px;
@@ -195,10 +228,10 @@ body {
         
 .message-block{
     overflow: auto;
-    height: 85%;
-    height: -webkit-calc(100% - 133px);
-    height:    -moz-calc(100% - 133px);
-    height:         calc(100% - 133px);
+    height: 82%;
+    height: -webkit-calc(100% - 173px);
+    height:    -moz-calc(100% - 173px);
+    height:         calc(100% - 173px);
 }
     .mb-item{
         padding: 14px 40px 28px;
@@ -223,6 +256,10 @@ body {
             }
                 .mb-item .media .media-object .name{
                     font-size: 18px;
+                }
+                .mb-item .media .media-object img{
+                    border-radius: 50px;
+                    width: 60px;
                 }
                 .mb-item .media .media-object .online{
                     display: none;
@@ -249,6 +286,24 @@ body {
                         height: 6px;
                         border-radius: 25px;
                         background: #50e3c2;
+                    }
+                    
+                .mb-item .media .media-object .chatroom{
+                    position: absolute;
+                    bottom: -8px;
+                    right: -8px;
+                    background: white;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 25px;
+                    border: #50e3c2 4px solid;
+                }
+                    .mb-item .media .media-object .chatroom img{
+                        border-radius: 25px;
+                        width: 22px;
+                        position: absolute;
+                        top: -1px;
+                        left: -1px;
                     }
             .mb-item .media .media-body{
                 padding-left: 10px;
@@ -405,6 +460,20 @@ body {
                 width: 75px;
                 right: -90px;
             }
+                .cb-item.admin .cb-date img{
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                .cb-item.admin .cb-readed{
+                    color: #d8d8d8;
+                    font-size: 18px;
+                    position: absolute;
+                    min-width: 250px;
+                    line-height: 1.3em;
+                    white-space: nowrap;
+                    right: 85px;
+                    bottom: -30px;
+                }
     
 .appeal-block{
 
