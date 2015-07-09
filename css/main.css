@@ -201,7 +201,8 @@ body {
         }
         .cb-control:hover,
         .cb-control.active{opacity: 1;}
-        
+    .cc-border{display: none;}
+    
 .search-block{
     
 }
@@ -937,7 +938,7 @@ body {
             font-size: 18px;
             line-height: 1.5em;
             letter-spacing: -0.55px;
-            margin-bottom: 50px;
+            margin-bottom: 50px;    
             position: relative;
         }
         .fbb-lesson:hover p{opacity: 0.5;}
@@ -967,5 +968,33 @@ body {
             .fbb-lesson p{
                 margin-bottom: 3px;
             }
-            
+
+@media screen and (max-aspect-ratio: 4/3) {
+    body{zoom: 0.75;}
+    .col1{width: 100px; transition: 0.4s; overflow: hidden; z-index: 1;}
+    .col2{left: 100px; right: 500px;}
+    .col3{width: 500px;}
+    .col1:hover{width: 400px;}
+        .col1:hover .login-block .media-body{opacity: 1;}
+        .col1:hover .login-block .media-left{padding-left: 0px;}
+        .col1:hover .login-block .logout{opacity: 1;}
+            .col1:hover .control-block{width: 400px;}
+                .col1:hover .control-content .cc-left .cb-control:not(:first-child){opacity: 1;}
+                .col1:hover .control-content .cc-right{opacity: 1;}
+        .col1:hover .message-block .media-body{opacity: 1;}
+    
+    .login-block{width: 400px;}
+        .login-block .media-body{transition: 0.4s;opacity: 0;}
+        .login-block .media-left{transition: 0.4s;padding-left: 12px;}
+        .login-block .logout{transition: 0.4s;opacity: 0;}
         
+    .control-block{padding: 35px 15px 11px 15px; overflow: hidden;}
+        .control-content{transition: 0.4s; height: 87px; padding-top: 13px; overflow: hidden; width: 370px; margin-top: -13px; border: none;}
+            .control-content .cc-left .cb-control:not(:first-child){transition: 0.4s;opacity: 0;}
+            .control-content .cc-right{transition: 0.4s;opacity: 0;}
+        .cc-border{display: block; height: 1px; width: 100%; border-bottom: rgba(255,255,255,0.5) 2px solid;}
+        
+    .message-block{width: 400px;}
+        .message-block .mb-item {padding: 14px 23px 28px 18px;}
+        .message-block .media-body{transition: 0.4s; opacity: 0;}
+}
